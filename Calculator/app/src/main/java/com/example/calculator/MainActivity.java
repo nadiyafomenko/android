@@ -41,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
         String buttonText = button.getText().toString();
 
+        if (button.getTag().toString().equals("trigonometry")) {
+            buttonText = buttonText + "(";
+        }
+
         appendToDisplayText(buttonText);
     }
 
@@ -73,5 +77,41 @@ public class MainActivity extends AppCompatActivity {
 
         displayEditText.setText(result);
         displayEditText.setSelection(result.length());
+    }
+
+    public void onArcSinPress(View view){
+        appendToDisplayText("arcsin(");
+    }
+
+    public void onArcCosPress(View view){
+        appendToDisplayText("arccos(");
+    }
+
+    public void onArcTanPress(View view){
+        appendToDisplayText("arctan(");
+    }
+
+    public void onSqrtPress(View view){
+        appendToDisplayText("sqrt(");
+    }
+
+    public void onAbsPress(View view){
+        appendToDisplayText("abs(");
+    }
+
+    public void onxSquaredPress(View view){
+        appendToDisplayText("^(2)");
+    }
+
+    public void onxPowerYPress(View view){
+        appendToDisplayText("^(");
+    }
+
+    public void onPrimePress(View view){
+        appendToDisplayText("ispr(");
+    }
+
+    public void onPiPress(View view){
+        appendToDisplayText("pi");
     }
 }
